@@ -4,6 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { CommonModule } from '@angular/common';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
@@ -11,10 +18,17 @@ import { HomeComponent } from './components/home/home.component';
     HomeComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzSelectModule,
+    NzRadioModule,
+    NzInputModule,
+    NzFormModule,
+    NzButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

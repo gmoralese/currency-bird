@@ -1,3 +1,37 @@
 <div class="all-content">
-  
+  <div class="select">
+    <nz-select [(ngModel)]="mode" (ngModelChange)="changeInputStatus()">
+      <nz-option nzValue="true" nzLabel="Enviar"></nz-option>
+      <nz-option nzValue="false" nzLabel="Recibir"></nz-option>
+    </nz-select>
+  </div>
+  <div class="input">
+    <input *ngIf="disableInput" 
+      nz-input 
+      [(ngModel)]="incoming"/>
+    <input *ngIf="!disableInput"
+      nz-input 
+      [(ngModel)]="outgoing"/>
+  </div>
+  <div class="country">
+    <input nz-input placeholder="CLP" disabled/>
+    <nz-select [(ngModel)]="selectedCountry">
+      <nz-option 
+        *ngFor="let country of countryStats" 
+        [nzValue]="country" [nzLabel]="country.country">
+      </nz-option>
+    </nz-select>
+  </div>
+  <div class="button">
+    <button nz-button 
+      (click)="calculate(incoming, outgoing, selectedCountry)"
+      nzType="primary">
+      Calcular
+    </button>
+  </div>
+  <div class="input">
+    <input disabled 
+      nz-input 
+      [(ngModel)]="result"/>
+  </div>
 </div>

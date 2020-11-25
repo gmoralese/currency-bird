@@ -1,39 +1,26 @@
-.layout {
-  min-height: 100vh;
-}
+.all-content {
+  width: 40%;
+  margin: 20%;
+  display: flex;
+  flex-direction: row;
 
-.logo {
-  width: 120px;
-  height: 31px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px 24px 16px 0;
-  float: left;
-}
+  .select {
+    width: 33%;
 
-nz-header {
-  position: fixed;
-  width: 100%;
-}
+    nz-select {
+      width: 100%;
+    }
+  }
 
-[nz-menu] {
-  line-height: 64px;
-}
+  .input {
+    width: 33%;
+  }
 
-nz-content {
-  padding: 0 50px;
-  margin-top: 64px;
-}
+  .country {
+    width: 33%;
 
-nz-breadcrumb {
-  margin: 16px 0;
-}
-
-.inner-content {
-  background: #fff;
-  padding: 24px;
-  min-height: 380px;
-}
-
-nz-footer {
-  text-align: center;
+    nz-select {
+      width: 100%;
+    }
+  }
 }
