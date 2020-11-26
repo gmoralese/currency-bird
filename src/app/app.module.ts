@@ -11,6 +11,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { CommonModule } from '@angular/common';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMessageModule } from 'ng-zorro-antd/message';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     NzRadioModule,
     NzInputModule,
     NzFormModule,
-    NzButtonModule
+    NzButtonModule,
+    NzMessageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

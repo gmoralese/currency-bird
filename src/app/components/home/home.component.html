@@ -14,7 +14,7 @@
       [(ngModel)]="outgoing"/>
   </div>
   <div class="country">
-    <input nz-input placeholder="CLP" disabled/>
+    <input *ngIf="!disableInput" nz-input placeholder="CLP" disabled/>
     <nz-select [(ngModel)]="selectedCountry">
       <nz-option 
         *ngFor="let country of countryStats" 
